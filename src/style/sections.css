@@ -1,0 +1,276 @@
+/* banner */
+.banner {
+  background: var(--banner-bg);
+  padding: 48px 0;
+}
+
+.banner__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.banner__title {
+  margin-bottom: 8px;
+  font-size: 56px;
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.banner__subtitle {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.banner__avatarWrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner__avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+/* about */
+.about {
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+.about__stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: #fa3af77b;
+  border-top-left-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-lg);
+}
+
+/* skills */
+.skills {
+  padding: 28px;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 12px;
+}
+
+.skill {
+  width: 96px;
+  height: 96px;
+  background: #7a7a7a;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+}
+
+.skill__img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+
+/* projects */
+.projects {
+  padding: 28px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  text-align: left;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: #d9d9d9;
+}
+
+.project__coverWrap {
+  aspect-ratio: 16 / 9;
+  background: #f2f2f2;
+}
+
+.project__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ececec, #f7f7f7);
+}
+
+.project__body {
+  padding: 14px 16px 6px;
+}
+
+.project__title {
+  margin: 2px 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project__desc {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.project__stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project__stackLogo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: saturate(0.9) contrast(1.05);
+}
+
+.project__actions {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px 16px;
+  align-items: center;
+}
+
+.project__actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* certificates */
+.certificates {
+  padding: 2rem 0;
+  scroll-margin-top: 80px;
+}
+
+.certificates h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.cert-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: left;
+}
+
+.cert-thumb {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.cert-meta {
+  color: #666;
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #111827;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.cert-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* contact */
+.contact {
+  padding: 28px;
+  text-align: center;
+}
+
+.contact__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* floating cv */
+.floating-cv {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  background: #0000009d;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.floating-cv:hover {
+  opacity: 0.9;
+}
