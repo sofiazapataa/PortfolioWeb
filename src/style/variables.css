@@ -1,9 +1,9 @@
 :root {
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
 
-  --bg: #ffffff;
-  --banner-bg: #b8b8b8;
-  --card: #e6e6e6;
+  --bg: #f7f7f8;
+  --banner-bg: linear-gradient(135deg, #d8d8dc 0%, #c9c9cf 100%);
+  --card: #ececef;
   --surface: #ffffff;
   --ink: #111111;
   --muted: #666666;
@@ -12,14 +12,14 @@
   --border: #e5e5e5;
 
   --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 999px;
 
-  --container: 1100px;
+  --container: 1120px;
 
   --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.12);
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;

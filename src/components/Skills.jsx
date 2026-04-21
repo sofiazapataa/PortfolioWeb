@@ -13,6 +13,9 @@ export default function Skills() {
   return (
     <section className="card skills">
       <h2 className="card__title">Skills</h2>
+      <p className="card__text skills__intro">
+        Tecnologías y herramientas con las que desarrollo interfaces y prototipos.
+      </p>
 
       <div className="skills__grid">
         {skills.map((s) => (
@@ -23,6 +26,7 @@ export default function Skills() {
               className="skill__img"
               onError={(e) => (e.currentTarget.style.opacity = 0.3)}
             />
+            <span className="skill__label">{s.name}</span>
           </div>
         ))}
       </div>

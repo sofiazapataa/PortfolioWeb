@@ -1,27 +1,52 @@
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   #root {
     padding: 1rem;
   }
 
   .banner__grid {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .banner__title {
-    font-size: 40px;
+  .banner__content {
+    text-align: center;
+  }
+
+  .banner__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .banner__actions {
+    justify-content: center;
   }
 
   .banner__avatarWrap {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .banner__avatar {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .skills__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .projects__grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -36,15 +61,15 @@
   }
 
   .card__title {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .banner {
-    padding: 32px 0;
+    padding: 36px 0;
   }
 
   .banner__title {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .banner__actions,
@@ -60,34 +85,19 @@
     width: 100%;
   }
 
-  .banner__avatarWrap {
-    justify-content: center;
-  }
-
-  .projects {
-    padding: 20px;
-  }
-
-  .skills {
-    padding: 20px;
-  }
-
+  .projects,
+  .skills,
   .contact {
     padding: 20px;
   }
 
   .skills__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .skill {
-    width: 80px;
-    height: 80px;
-  }
-
-  .project__actions .btn {
-    flex: initial;
+    min-height: 110px;
+    padding: 14px;
   }
 
   .floating-cv {
@@ -98,9 +108,22 @@
   }
 }
 
-@media (max-width: 540px) {
-  .projects__grid,
-  .cert-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 420px) {
+  .banner__title {
+    font-size: 30px;
+  }
+
+  .banner__subtitle {
+    font-size: 15px;
+  }
+
+  .tech-badge {
+    font-size: 12px;
+    padding: 7px 9px;
+  }
+
+  .tech-badge__icon {
+    width: 16px;
+    height: 16px;
   }
 }
