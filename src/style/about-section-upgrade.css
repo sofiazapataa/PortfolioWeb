@@ -1,0 +1,117 @@
+.about--next {
+  position: relative;
+  padding: 32px 28px;
+  text-align: left;
+}
+
+.about--next .about__stripe {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  bottom: 22px;
+  width: 6px;
+  background: #f08ae0;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+
+.about--next .about__header {
+  margin-bottom: 22px;
+}
+
+.about--next .about__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.about--next .card__title {
+  margin-bottom: 12px;
+}
+
+.about--next .about__intro {
+  max-width: 920px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about--next .about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.about--next .about__infoCard {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about--next .about__infoTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.about--next .about__infoText {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.about--next .about__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about--next .about__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+@media (max-width: 960px) {
+  .about--next .about__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .about--next .about__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about--next {
+    padding: 20px;
+  }
+
+  .about--next .about__intro {
+    font-size: 14px;
+  }
+
+  .about--next .about__infoCard {
+    padding: 16px;
+  }
+}

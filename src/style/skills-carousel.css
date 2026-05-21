@@ -1,0 +1,147 @@
+.skills-carousel {
+  padding: 30px 28px;
+  overflow: hidden;
+}
+
+.skills-carousel__header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.skills-carousel__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.skills-carousel__subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.skills-carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.skills-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: max-content;
+  animation: skillsCarouselMove 24s linear infinite;
+}
+
+.skills-carousel__viewport:hover .skills-carousel__track {
+  animation-play-state: paused;
+}
+
+.skills-carousel__item {
+  flex: 0 0 auto;
+  width: 180px;
+  min-height: 120px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skills-carousel__iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #f7f7f8;
+  border: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.skills-carousel__icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.skills-carousel__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+@keyframes skillsCarouselMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-carousel {
+    padding: 20px;
+  }
+
+  .skills-carousel__item {
+    width: 150px;
+    min-height: 105px;
+    padding: 14px 12px;
+  }
+
+  .skills-carousel__iconBox {
+    width: 46px;
+    height: 46px;
+  }
+
+  .skills-carousel__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skills-carousel__label {
+    font-size: 14px;
+  }
+
+  .skills-carousel__track {
+    gap: 14px;
+    animation-duration: 20s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-carousel__track {
+    animation: none;
+  }
+}

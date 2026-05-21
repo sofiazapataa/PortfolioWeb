@@ -1,13 +1,20 @@
 export default function Contact() {
   return (
-    <section className="card contact">
+    <section className="card contact" id="contact">
+      <span className="contact__eyebrow">Disponible para freelance</span>
+
       <h2 className="card__title">Contacto</h2>
+
       <p className="card__text contact__text">
-        Estoy disponible para proyectos freelance y para seguir creciendo en desarrollo frontend.
+        Estoy disponible para proyectos freelance tanto de desarrollo web como
+        de edición de video. Si tenés una idea, una marca o un proyecto para
+        mostrar, escribime.
       </p>
-      <p className="card__text contact__mail">
-        Podés escribirme a <b>sofizapata2004@gmail.com</b>
-      </p>
+
+      <div className="contact__mailBox">
+        <p className="contact__mailLabel">Email</p>
+        <p className="contact__mail">sofizapata2004@gmail.com</p>
+      </div>
 
       <div className="contact__actions">
         <a className="btn btn--primary" href="mailto:sofizapata2004@gmail.com">

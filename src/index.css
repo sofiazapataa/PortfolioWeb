@@ -66,3 +66,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@import "./variables.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./sections.css";
+@import "./responsive.css";
+@import "./banner-upgrade.css";
+@import "./about-section-upgrade.css";
+@import "./skills-carousel.css";

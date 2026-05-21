@@ -1,0 +1,143 @@
+.skills--marquee {
+  padding: 30px 28px;
+  overflow: hidden;
+}
+
+.skills--marquee .skills__header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.skills--marquee .skills__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.skills--marquee .skills__subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.skills--marquee .skills__marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 6px 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.skills--marquee .skills__track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: skills-scroll 28s linear infinite;
+}
+
+.skills--marquee .skills__marquee:hover .skills__track {
+  animation-play-state: paused;
+}
+
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 190px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.skill-pill__iconWrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #f7f7f8;
+  border: 1px solid #ececec;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.skill-pill__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.skill-pill__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  white-space: nowrap;
+}
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills--marquee {
+    padding: 20px;
+  }
+
+  .skill-pill {
+    min-width: 165px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .skill-pill__iconWrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-pill__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .skill-pill__label {
+    font-size: 14px;
+  }
+
+  .skills--marquee .skills__track {
+    gap: 12px;
+    animation-duration: 22s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills--marquee .skills__track {
+    animation: none;
+  }
+}
