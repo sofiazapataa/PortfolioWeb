@@ -69,9 +69,21 @@ export default function Proyects() {
     Node: `${base}logos/logoNode.png`,
     Express: `${base}logos/logoExpress.png`,
     MongoDB: `${base}logos/logoMongoDB.png`,
+    HTML: null,
+    "Claude AI": `${base}logos/logoClaude.png`,
   };
 
   const projects = [
+    {
+      title: "Cine Paseo Aldrey",
+      type: "UI/UX Design",
+      desc: "Rediseño completo de la experiencia digital del único cine del shopping en Mar del Plata — de la cartelera al checkout — resolviendo duplicados, redirección externa y ausencia de diseño mobile.",
+      cover: `${base}covers/cine-paseo-aldrey.png`,
+      demo: "https://presentacion-redise-o-cine.vercel.app/",
+      repo: "https://github.com/sofiazapataa/presentacion-redise-o-cine.git",
+      stack: ["Figma", "HTML", "Claude AI"],
+      featured: true,
+    },
     {
       title: "Tienda Multiskin",
       type: "Full Stack",
