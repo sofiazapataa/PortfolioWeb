@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import FloatingCV from "./components/FloatingCV";
 import Certificates from "./components/Certificates";
 import Controls from "./components/Controls";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Certificates />
       </main>
 
+      <Navbar />
       <FloatingCV />
       <Controls />
     </AppProvider>

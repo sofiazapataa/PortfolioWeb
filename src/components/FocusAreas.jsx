@@ -1,9 +1,11 @@
 import { useApp } from "../context/AppContext";
 import t from "../i18n/translations";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function FocusAreas() {
   const { lang } = useApp();
   const tx = t[lang].focusAreas;
+  const ref = useScrollReveal();
 
   const goProjects = () => {
     document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
@@ -14,7 +16,7 @@ export default function FocusAreas() {
   };
 
   return (
-    <section className="card focus-areas" id="focus-areas">
+    <section ref={ref} className="card focus-areas reveal" id="focus-areas">
       <div className="focus-areas__header">
         <span className="focus-areas__eyebrow">{tx.eyebrow}</span>
         <h2 className="card__title">{tx.title}</h2>

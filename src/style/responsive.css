@@ -21,6 +21,10 @@
     justify-content: center;
   }
 
+  .banner__social {
+    justify-content: center;
+  }
+
   .banner__avatarWrap {
     justify-content: center;
   }
@@ -31,40 +35,22 @@
   }
 
   .focus-areas__grid,
-  .projects__grid,
   .video-editing__grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .skills__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 720px) {
   .focus-areas__grid,
-  .projects__grid,
   .cert-grid,
   .video-editing__grid {
     grid-template-columns: 1fr;
-  }
-
-  .skills__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .focus-card .btn,
   .video-editing__actions .btn {
     align-self: stretch;
     width: 100%;
-  }
-
-  .project--featured {
-    grid-column: auto;
-  }
-
-  .project--featured .project__coverWrap {
-    aspect-ratio: 16 / 10;
   }
 }
 
@@ -90,39 +76,19 @@
     font-size: 34px;
   }
 
-  .banner__actions,
-  .contact__actions,
-  .project__actions {
+  .banner__actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .banner__actions .btn,
-  .contact__actions .btn,
-  .project__actions .btn {
+  .banner__actions .btn {
     width: 100%;
   }
 
-  .focus-areas,
-  .projects,
-  .skills,
   .video-editing,
   .contact,
   .about {
     padding: 20px;
-  }
-
-  .skills__grid {
-    gap: 14px;
-  }
-
-  .skill {
-    min-height: 120px;
-    padding: 14px;
-  }
-
-  .contact__mail {
-    font-size: 16px;
   }
 
   .floating-cv {
@@ -142,25 +108,8 @@
     font-size: 15px;
   }
 
-  .focus-card__title,
-  .project__title {
-    font-size: 20px;
-  }
-
-  .tech-badge {
-    font-size: 12px;
-    padding: 7px 9px;
-  }
-
-  .tech-badge__icon {
-    width: 16px;
-    height: 16px;
-  }
-
   .about__chip,
   .contact__eyebrow,
-  .skills__eyebrow,
-  .projects__eyebrow,
   .video-editing__eyebrow,
   .focus-areas__eyebrow {
     font-size: 11px;

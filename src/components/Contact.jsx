@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useApp } from "../context/AppContext";
 import t from "../i18n/translations";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Contact() {
   const { lang } = useApp();
   const tx = t[lang].contact;
+  const ref = useScrollReveal();
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const myEmail = "sofizapata2004@gmail.com";
@@ -28,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="card contact contact--pro" id="contact">
+    <section ref={ref} className="card contact contact--pro reveal" id="contact">
       <div className="contact__header">
         <span className="contact__eyebrow">{tx.eyebrow}</span>
         <h2 className="card__title">{tx.title}</h2>

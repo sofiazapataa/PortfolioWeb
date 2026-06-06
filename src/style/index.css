@@ -3,9 +3,10 @@
 @import "./layout.css";
 @import "./sections.css";
 @import "./responsive.css";
-@import "./banner-upgrade.css";
 @import "./about-section-upgrade.css";
 @import "./projects-coverflow.css";
 @import "./skills-carousel.css";
 @import "./contact-upgrade.css";
 @import "./controls.css";
+@import "./navbar.css";
+@import "./animations.css";

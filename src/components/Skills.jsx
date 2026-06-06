@@ -1,11 +1,13 @@
 import { useApp } from "../context/AppContext";
 import t from "../i18n/translations";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const base = import.meta.env.BASE_URL;
 
 export default function Skills() {
   const { lang } = useApp();
   const tx = t[lang].skills;
+  const ref = useScrollReveal();
 
   const items = [
     { name: "Bootstrap", icon: `${base}logos/logoBoostrap.png` },
@@ -21,7 +23,7 @@ export default function Skills() {
   const loopItems = [...items, ...items];
 
   return (
-    <section className="card skills-carousel" id="skills">
+    <section ref={ref} className="card skills-carousel reveal" id="skills">
       <div className="skills-carousel__header">
         <span className="skills-carousel__eyebrow">{tx.eyebrow}</span>
         <h2 className="card__title">{tx.title}</h2>

@@ -1,12 +1,14 @@
 import { useApp } from "../context/AppContext";
 import t from "../i18n/translations";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function About() {
   const { lang } = useApp();
   const tx = t[lang].about;
+  const ref = useScrollReveal();
 
   return (
-    <section className="card about about--next" id="about">
+    <section ref={ref} className="card about about--next reveal" id="about">
       <span className="about__stripe" aria-hidden="true"></span>
 
       <div className="about__header">
