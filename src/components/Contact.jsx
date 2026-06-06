@@ -122,6 +122,28 @@ export default function Contact() {
             </ul>
           </div>
 
+          <div className="contact-card__block">
+            <p className="contact-card__label">Redes</p>
+            <div className="contact-card__social">
+              <a
+                className="contact-card__socialLink"
+                href="https://www.linkedin.com/in/sofi-zapata-b58427265/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="contact-card__socialLink"
+                href="https://github.com/sofiazapataa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
           <div className="contact-card__actions">
             <a className="btn btn--ghost" href={`mailto:${myEmail}`}>
               Escribirme por mail

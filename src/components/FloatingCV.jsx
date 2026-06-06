@@ -4,8 +4,8 @@ export default function FloatingCV() {
   return (
     <a
       className="floating-cv"
-      href={`${base}pdf/sofia_zapata_cv.pdf`} // 👈 ruta corregida
-      download="Sofia_Zapata_CV.pdf"         // 👈 nombre al descargar (opcional)
+      href={`${base}pdf/sofia_zapata_cv.pdf`}
+      download="Sofia_Zapata_CV.pdf"
       title="Descargar CV"
     >
       Descargar CV

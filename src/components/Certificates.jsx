@@ -1,32 +1,34 @@
+const base = import.meta.env.BASE_URL;
+
 export default function Certificates() {
   const certs = [
     {
       title: "Javascript",
       org: "CoderHouse",
       year: "2025",
-      img: "/certificates/certificado-javascript.png",
-      file: "/certificates/certificado-javascript.png",
+      img: `${base}certificates/certificado-javascript.png`,
+      file: `${base}certificates/certificado-javascript.png`,
     },
     {
       title: "Inglés Intermedio",
       org: "CoderHouse",
       year: "2024",
-      img: "/certificates/certificado-ingles.png",
-      file: "/certificates/certificado-ingles.png",
+      img: `${base}certificates/certificado-ingles.png`,
+      file: `${base}certificates/certificado-ingles.png`,
     },
     {
       title: "Diseño UX-UI",
       org: "CoderHouse",
       year: "2023",
-      img: "/certificates/certificado-diseno-ux-ui.png",
-      file: "/certificates/certificado-diseno-ux-ui.png",
+      img: `${base}certificates/certificado-diseno-ux-ui.png`,
+      file: `${base}certificates/certificado-diseno-ux-ui.png`,
     },
     {
       title: "Desarrollo Web",
       org: "CoderHouse",
       year: "2025",
-      img: "/certificates/certificado-desarrolloWeb.png",
-      file: "/certificates/certificado-desarrolloWeb.png",
+      img: `${base}certificates/certificado-desarrolloWeb.png`,
+      file: `${base}certificates/certificado-desarrolloWeb.png`,
     },
   ];
 
@@ -42,8 +44,8 @@ export default function Certificates() {
         </p>
 
         <div className="cert-grid">
-          {certs.map((c, i) => (
-            <article key={i} className="cert-card">
+          {certs.map((c) => (
+            <article key={c.title} className="cert-card">
               <div className="cert-thumb">
                 <img src={c.img} alt={`Certificado ${c.title}`} loading="lazy" />
               </div>

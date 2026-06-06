@@ -9,6 +9,7 @@ export default function Skills() {
     { name: "Sass", icon: `${base}logos/logoSass.png` },
     { name: "Git", icon: `${base}logos/git-logo.png` },
     { name: "CSS", icon: `${base}logos/logoCSS.png` },
+    { name: "Claude AI", icon: `${base}logos/logoClaude.png` },
   ];
 
   const loopItems = [...items, ...items];
@@ -37,6 +38,7 @@ export default function Skills() {
                   src={item.icon}
                   alt={index < items.length ? item.name : ""}
                   className="skills-carousel__icon"
+                  loading="lazy"
                 />
               </div>
               <span className="skills-carousel__label">{item.name}</span>

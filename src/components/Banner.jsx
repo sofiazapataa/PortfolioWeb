@@ -74,6 +74,28 @@ export default function Banner({
               {copied ? "¡Link copiado!" : "Copiar link"}
             </button>
           </div>
+
+          <div className="banner__social">
+            <a
+              className="banner__socialLink"
+              href="https://www.linkedin.com/in/sofi-zapata-b58427265/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Sofía Zapata"
+            >
+              LinkedIn
+            </a>
+            <span className="banner__socialDivider" aria-hidden="true">·</span>
+            <a
+              className="banner__socialLink"
+              href="https://github.com/sofiazapataa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Sofía Zapata"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
 
         <div className="banner__avatarWrap">

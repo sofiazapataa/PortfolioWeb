@@ -27,13 +27,6 @@ export default function VideoEditing() {
         ))}
       </div>
 
-      <div className="video-editing__note">
-        <p>
-          Más adelante acá también podemos sumar una mini galería con 2 o 3
-          trabajos de edición para que esta sección tenga todavía más fuerza.
-        </p>
-      </div>
-
       <div className="video-editing__actions">
         <a className="btn btn--primary" href="mailto:sofizapata2004@gmail.com">
           Consultar por edición
