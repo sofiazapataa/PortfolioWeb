@@ -1,3 +1,4 @@
+import { AppProvider } from "./context/AppContext";
 import Banner from "./components/Banner";
 import FocusAreas from "./components/FocusAreas";
 import About from "./components/About";
@@ -7,11 +8,12 @@ import VideoEditing from "./components/VideoEditing";
 import Contact from "./components/Contact";
 import FloatingCV from "./components/FloatingCV";
 import Certificates from "./components/Certificates";
+import Controls from "./components/Controls";
 
 export default function App() {
   return (
-    <>
-      <Banner name="Sofía" />
+    <AppProvider>
+      <Banner name="Sofía Zapata" />
 
       <main className="container">
         <FocusAreas />
@@ -24,6 +26,7 @@ export default function App() {
       </main>
 
       <FloatingCV />
-    </>
+      <Controls />
+    </AppProvider>
   );
 }

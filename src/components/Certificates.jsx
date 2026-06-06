@@ -1,6 +1,12 @@
+import { useApp } from "../context/AppContext";
+import t from "../i18n/translations";
+
 const base = import.meta.env.BASE_URL;
 
 export default function Certificates() {
+  const { lang } = useApp();
+  const tx = t[lang].certificates;
+
   const certs = [
     {
       title: "Javascript",
@@ -35,13 +41,9 @@ export default function Certificates() {
   return (
     <section id="certificates" className="certificates certificates--muted">
       <details className="certificates__details">
-        <summary className="certificates__summary">
-          Formación complementaria
-        </summary>
+        <summary className="certificates__summary">{tx.summary}</summary>
 
-        <p className="certificates__intro">
-          Algunos cursos y certificados que forman parte de mi recorrido.
-        </p>
+        <p className="certificates__intro">{tx.intro}</p>
 
         <div className="cert-grid">
           {certs.map((c) => (
@@ -50,12 +52,8 @@ export default function Certificates() {
                 <img src={c.img} alt={`Certificado ${c.title}`} loading="lazy" />
               </div>
               <h3 className="cert-title">{c.title}</h3>
-              <p className="cert-meta">
-                {c.org} · {c.year}
-              </p>
-              <a href={c.file} download className="cert-btn">
-                Descargar
-              </a>
+              <p className="cert-meta">{c.org} · {c.year}</p>
+              <a href={c.file} download className="cert-btn">{tx.btnDownload}</a>
             </article>
           ))}
         </div>

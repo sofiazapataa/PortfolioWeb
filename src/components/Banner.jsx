@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useApp } from "../context/AppContext";
+import t from "../i18n/translations";
 
 const base = import.meta.env.BASE_URL;
 
@@ -6,15 +8,13 @@ export default function Banner({
   name = "Sofía Zapata",
   photoUrl = `${base}logos/FotoPerfil.png`,
 }) {
+  const { lang } = useApp();
+  const tx = t[lang].banner;
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!copied) return;
-
-    const timer = setTimeout(() => {
-      setCopied(false);
-    }, 1800);
-
+    const timer = setTimeout(() => setCopied(false), 1800);
     return () => clearTimeout(timer);
   }, [copied]);
 
@@ -32,46 +32,33 @@ export default function Banner({
   };
 
   const goVideo = () => {
-    document
-      .querySelector("#video-editing")
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#video-editing")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <header className="banner banner--upgrade">
       <div className="container banner__grid">
         <div className="banner__content">
-          <p className="banner__eyebrow">Disponible para trabajos freelance</p>
+          <p className="banner__eyebrow">{tx.eyebrow}</p>
 
           <h1 className="banner__title">
-            Desarrollo web <span className="banner__plus">+</span> edición de
-            video
+            {tx.titlePart1} <span className="banner__plus">+</span> {tx.titlePart2}
           </h1>
 
-          <p className="banner__subtitle">
-            Soy {name}. Combino frontend y contenido audiovisual para crear
-            sitios web claros, modernos y piezas visuales pensadas para mostrar
-            marcas, productos y proyectos de forma más profesional.
-          </p>
+          <p className="banner__subtitle">{tx.subtitle}</p>
 
           <div className="banner__actions">
             <button className="btn btn--primary" onClick={goProjects}>
-              Ver proyectos web
+              {tx.btnProjects}
             </button>
-
             <button className="btn btn--ghost" onClick={goVideo}>
-              Ver edición
+              {tx.btnVideo}
             </button>
-
-            <a
-              className="btn btn--ghost"
-              href="mailto:sofizapata2004@gmail.com"
-            >
-              Escribime
+            <a className="btn btn--ghost" href="mailto:sofizapata2004@gmail.com">
+              {tx.btnContact}
             </a>
-
             <button className="btn btn--ghost" onClick={copyPageLink}>
-              {copied ? "¡Link copiado!" : "Copiar link"}
+              {copied ? tx.btnCopied : tx.btnCopyLink}
             </button>
           </div>
 

@@ -1,6 +1,12 @@
+import { useApp } from "../context/AppContext";
+import t from "../i18n/translations";
+
 const base = import.meta.env.BASE_URL;
 
 export default function Skills() {
+  const { lang } = useApp();
+  const tx = t[lang].skills;
+
   const items = [
     { name: "Bootstrap", icon: `${base}logos/logoBoostrap.png` },
     { name: "JavaScript", icon: `${base}logos/logoJS.jpg` },
@@ -17,12 +23,9 @@ export default function Skills() {
   return (
     <section className="card skills-carousel" id="skills">
       <div className="skills-carousel__header">
-        <span className="skills-carousel__eyebrow">Skills</span>
-        <h2 className="card__title">Tecnologías y herramientas</h2>
-        <p className="card__text skills-carousel__subtitle">
-          Herramientas con las que desarrollo interfaces, prototipos y proyectos
-          visualmente cuidados.
-        </p>
+        <span className="skills-carousel__eyebrow">{tx.eyebrow}</span>
+        <h2 className="card__title">{tx.title}</h2>
+        <p className="card__text skills-carousel__subtitle">{tx.subtitle}</p>
       </div>
 
       <div className="skills-carousel__viewport">

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Navigation, EffectCoverflow, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectModal from "./ProjectModal";
+import { useApp } from "../context/AppContext";
+import t from "../i18n/translations";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,6 +44,8 @@ function Cover({ src, alt, title }) {
 }
 
 export default function Proyects() {
+  const { lang } = useApp();
+  const tx = t[lang].projects;
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
@@ -140,12 +144,9 @@ export default function Proyects() {
     <>
       <section className="card projects-coverflow" id="projects">
         <div className="projects-coverflow__header">
-          <span className="projects-coverflow__eyebrow">Desarrollo web</span>
-          <h2 className="card__title">Proyectos</h2>
-          <p className="card__text projects-coverflow__intro">
-            Podés recorrer mis trabajos con flechas y abrir cada proyecto para
-            ver su detalle completo.
-          </p>
+          <span className="projects-coverflow__eyebrow">{tx.eyebrow}</span>
+          <h2 className="card__title">{tx.title}</h2>
+          <p className="card__text projects-coverflow__intro">{tx.intro}</p>
         </div>
 
         <div className="projects-coverflow__slider">
@@ -202,13 +203,15 @@ export default function Proyects() {
                       <span className="project-cf-card__type">{project.type}</span>
                       {project.featured ? (
                         <span className="project-cf-card__featured">
-                          Destacado
+                          {tx.labelFeatured}
                         </span>
                       ) : null}
                     </div>
 
                     <h3 className="project-cf-card__title">{project.title}</h3>
-                    <p className="project-cf-card__desc">{project.desc}</p>
+                    <p className="project-cf-card__desc">
+                      {tx.descriptions[project.title] || project.desc}
+                    </p>
 
                     <div className="project-cf-card__stack">
                       {project.stack.map((tech) => (
@@ -226,7 +229,7 @@ export default function Proyects() {
                         className="btn btn--primary"
                         onClick={() => setSelectedProject(project)}
                       >
-                        Ver detalle
+                        {tx.btnDetail}
                       </button>
                     </div>
                   </div>

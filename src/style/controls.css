@@ -1,0 +1,252 @@
+/* ── Controls flotantes (tema + idioma) ── */
+.controls {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 5px;
+  box-shadow: var(--shadow-md);
+}
+
+.controls__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  transition: background-color 0.18s ease, color 0.18s ease;
+  padding: 0 8px;
+}
+
+.controls__btn:hover {
+  background: var(--card);
+}
+
+.controls__btn--lang {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.controls__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  display: block;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* ── Dark mode variables ── */
+[data-theme="dark"] {
+  --bg: #111111;
+  --banner-bg: linear-gradient(135deg, #1c1c1c 0%, #161616 100%);
+  --card: #1a1a1a;
+  --surface: #242424;
+  --ink: #f0ede8;
+  --muted: #888888;
+  --primary: #f0ede8;
+  --primary-contrast: #111111;
+  --border: #2e2e2e;
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Ajustes dark mode para elementos con colores hardcodeados */
+[data-theme="dark"] .banner__eyebrow,
+[data-theme="dark"] .focus-areas__eyebrow,
+[data-theme="dark"] .about__eyebrow,
+[data-theme="dark"] .about--next .about__eyebrow,
+[data-theme="dark"] .skills-carousel__eyebrow,
+[data-theme="dark"] .projects-coverflow__eyebrow,
+[data-theme="dark"] .video-editing__eyebrow,
+[data-theme="dark"] .contact--pro .contact__eyebrow {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .focus-card {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .focus-card--dev,
+[data-theme="dark"] .focus-card--video {
+  background: linear-gradient(180deg, #1e1e1e 0%, #1a1a1a 100%);
+}
+
+[data-theme="dark"] .focus-card__tag {
+  background: #2a2a2a;
+  border-color: #333333;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .about--next .about__infoCard {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .about--next .about__chip {
+  background: #1e1e1e;
+  border-color: #2e2e2e;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .about--next .about__stripe {
+  background: #5a5a5a;
+}
+
+[data-theme="dark"] .skills-carousel__item {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .skills-carousel__iconBox {
+  background: #2a2a2a;
+  border-color: #333333;
+}
+
+[data-theme="dark"] .project-cf-card {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .project-cf-card__type {
+  background: #2a2a2a;
+  border-color: #333333;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .project-cf-card__featured {
+  background: var(--ink);
+  color: var(--primary-contrast);
+}
+
+[data-theme="dark"] .project-cf-card__badge {
+  background: #2a2a2a;
+  border-color: #333333;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .project-cf-card__placeholder {
+  background: #2a2a2a;
+  color: var(--muted);
+}
+
+[data-theme="dark"] .video-editing__item {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .video-editing__dot {
+  background: var(--ink);
+}
+
+[data-theme="dark"] .contact-form {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .contact-form__input,
+[data-theme="dark"] .contact-form__textarea {
+  background: #2a2a2a;
+  border-color: #333333;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .contact-form__input:focus,
+[data-theme="dark"] .contact-form__textarea:focus {
+  border-color: #555555;
+  background: #2e2e2e;
+  box-shadow: 0 0 0 4px rgba(240, 237, 232, 0.06);
+}
+
+[data-theme="dark"] .contact-form__label {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .contact-card {
+  background: linear-gradient(180deg, #1e1e1e 0%, #1a1a1a 100%);
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .contact-card__value {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .contact-card__socialLink {
+  background: #2a2a2a;
+  border-color: #333333;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .contact-card__socialLink:hover {
+  background: var(--ink);
+  color: var(--primary-contrast);
+}
+
+[data-theme="dark"] .cert-card {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .cert-thumb {
+  background: #2a2a2a;
+}
+
+[data-theme="dark"] .cert-btn {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .certificates summary {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .floating-cv {
+  background: var(--ink);
+  color: var(--primary-contrast);
+}
+
+[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .project-modal {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .banner__socialLink {
+  color: #777777;
+}
+
+[data-theme="dark"] .banner__socialLink:hover {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .btn--ghost {
+  border-color: rgba(240, 237, 232, 0.3);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .btn--ghost:hover {
+  background: var(--ink);
+  color: var(--primary-contrast);
+  border-color: var(--ink);
+}

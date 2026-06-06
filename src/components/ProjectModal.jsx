@@ -1,3 +1,6 @@
+import { useApp } from "../context/AppContext";
+import t from "../i18n/translations";
+
 function TechBadge({ label, icon }) {
   return (
     <span className="project-popup__badge">
@@ -10,7 +13,12 @@ function TechBadge({ label, icon }) {
 }
 
 export default function ProjectModal({ project, onClose, techIcons }) {
+  const { lang } = useApp();
+  const tx = t[lang].projects;
+
   if (!project) return null;
+
+  const description = tx.descriptions[project.title] || project.desc;
 
   return (
     <div
@@ -36,7 +44,7 @@ export default function ProjectModal({ project, onClose, techIcons }) {
           {project.cover ? (
             <img
               src={project.cover}
-              alt={`Vista previa de ${project.title}`}
+              alt={`${project.title}`}
               className="project-popup__image"
             />
           ) : (
@@ -50,12 +58,12 @@ export default function ProjectModal({ project, onClose, techIcons }) {
           <div className="project-popup__top">
             <span className="project-popup__type">{project.type}</span>
             {project.featured ? (
-              <span className="project-popup__featured">Proyecto destacado</span>
+              <span className="project-popup__featured">{tx.labelFeatured}</span>
             ) : null}
           </div>
 
           <h3 className="project-popup__title">{project.title}</h3>
-          <p className="project-popup__description">{project.desc}</p>
+          <p className="project-popup__description">{description}</p>
 
           <div className="project-popup__stack">
             {project.stack.map((tech) => (
@@ -71,10 +79,12 @@ export default function ProjectModal({ project, onClose, techIcons }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver demo
+                {tx.modal.btnDemo}
               </a>
             ) : (
-              <span className="btn btn--ghost btn--disabled">Demo pronto</span>
+              <span className="btn btn--ghost btn--disabled">
+                {lang === "es" ? "Demo pronto" : "Demo coming soon"}
+              </span>
             )}
 
             {project.repo ? (
@@ -84,7 +94,7 @@ export default function ProjectModal({ project, onClose, techIcons }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver código
+                {tx.modal.btnRepo}
               </a>
             ) : null}
           </div>
