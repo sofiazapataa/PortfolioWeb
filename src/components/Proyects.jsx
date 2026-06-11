@@ -92,7 +92,7 @@ export default function Proyects() {
       title: "Tienda Multiskin",
       type: "Full Stack, Mobile-first",
       desc: "Catálogo + WhatsApp commerce de una tienda de cosmética vegana con backend, autenticación y panel de administración. Es el proyecto más completo del portfolio y combina frontend, backend y presentación visual.",
-      cover: `${base}covers/Catalogo-kosmos.png`,
+      cover: `${base}covers/Catalogo-kosmosof.png`,
       demo: "https://catalogo-cosmos-2-0.vercel.app/",
       repo: "https://github.com/sofiazapataa/catalogo-cosmos-2.0.git",
       investigacion: "link a investigación",
