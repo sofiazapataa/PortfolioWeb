@@ -19,7 +19,7 @@ const t = {
       eyebrow: "Áreas principales",
       title: "Dos líneas de trabajo, un mismo portfolio",
       intro:
-        "Quiero que al entrar se entienda rápido que trabajo tanto en desarrollo web como en edición de video. Las dos áreas forman parte de mi perfil y de lo que hoy quiero ofrecer de forma freelance.",
+        "trabajo tanto en desarrollo web como en edición de video. Las dos áreas forman parte de mi perfil y de lo que hoy quiero ofrecer de forma freelance.",
       devTag: "Desarrollo web",
       devTitle: "Interfaces, sitios y experiencia visual",
       devText:
